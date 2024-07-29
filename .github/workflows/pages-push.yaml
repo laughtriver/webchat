@@ -23,7 +23,7 @@ jobs:
           echo "test=Hello World" >> $GITHUB_ENV
       - name: Set Config.js
         run: |
-          sed -i '1i${{ env.test }}' chat_test.js
+          sed -i '1i${{ secrets.CONFIG_FILE }}' chat_test.js
           cat chat_test.js
       - name: Setup Pages
         id: pages
