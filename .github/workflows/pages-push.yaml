@@ -17,14 +17,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
-      - name: Set ENV
-        run: |
-          echo "test=Hello World" >> $GITHUB_ENV
       - name: Set Config.js
         run: |
           sed -i '1i${{ secrets.CONFIG_FILE }}' chat_test.js
-          cat chat_test.js
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
