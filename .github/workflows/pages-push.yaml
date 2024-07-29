@@ -25,8 +25,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
+          name: product
           path: ./
   deploy:
     environment:
@@ -36,5 +37,7 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
+        id: product
         uses: actions/deploy-pages@v2
+        with:
+          name: product
