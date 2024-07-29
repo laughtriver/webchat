@@ -16,7 +16,8 @@ jobs:
       - name: Set Config.js
         run: |
           echo "${{ secrets.CONFIG_FILE }}" | sed -i '1i\\' chat_test.js
-
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
       - name: Deploy
         uses: actions/deploy-pages@v4
         with:
