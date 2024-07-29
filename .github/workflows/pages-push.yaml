@@ -15,6 +15,6 @@ jobs:
 
       - name: Set Config.js
         run: |
-          sed '1i ${{ secrets.CONFIG_FILE }}' chat_test.js
+          sed "1i ${{ secrets.CONFIG_FILE }}" chat_test.js
       - name: Deploy
         uses: actions/deploy-pages@v4
