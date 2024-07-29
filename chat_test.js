@@ -1,5 +1,5 @@
 // Firebaseの設定
-/*
+
 const firebaseConfig = {
   apiKey: "Firebase_APIkey",
   authDomain: "Firebase_AuthDomain",
@@ -10,7 +10,6 @@ const firebaseConfig = {
   appId: "Firebase_AppId",
   measurementId: "Firebase_Measure_emtId",
 };
-*/
 
 // Firebase初期化
 firebase.initializeApp(firebaseConfig);
