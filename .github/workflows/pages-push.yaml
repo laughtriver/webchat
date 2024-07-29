@@ -39,5 +39,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: product
         uses: actions/deploy-pages@v2
-        with:
-          name: product
